@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "smsRoamingCost": {
+      "type": "object",
+      "properties": {
+        "net": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        }
+      }
+    },
+    "voiceRoamingCost": {
+      "type": "object",
+      "properties": {
+        "net": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        }
+      }
+    },
+    "dataRoamingCost": {
+      "type": "object",
+      "properties": {
+        "net": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        }
+      }
+    },
+    "smsInternationalCost": {
+      "type": "object",
+      "properties": {
+        "net": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        }
+      }
+    },
+    "voiceInternationalCost": {
+      "type": "object",
+      "properties": {
+        "net": {
+          "type": "number"
+        },
+        "gross": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "smsRoamingCost",
+    "voiceRoamingCost",
+    "dataRoamingCost",
+    "smsInternationalCost",
+    "voiceInternationalCost"
+  ]
+}

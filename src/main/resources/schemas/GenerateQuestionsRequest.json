@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "customerId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "accountId": {
+      "type": "string"
+    },
+    "productId": {
+      "type": "string"
+    },
+    "contractId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tags"
+  ]
+}

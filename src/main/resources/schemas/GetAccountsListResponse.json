@@ -1,0 +1,1721 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "accountCode": {
+        "type": "string"
+      },
+      "accountContracts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "activationDateTime": {
+              "type": "object",
+              "properties": {
+                "chronology": {
+                  "type": "object",
+                  "properties": {
+                    "calendarType": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "calendarType",
+                    "id"
+                  ]
+                },
+                "dayOfMonth": {
+                  "type": "integer"
+                },
+                "dayOfWeek": {
+                  "type": "string"
+                },
+                "dayOfYear": {
+                  "type": "integer"
+                },
+                "hour": {
+                  "type": "integer"
+                },
+                "minute": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "string"
+                },
+                "monthValue": {
+                  "type": "integer"
+                },
+                "nano": {
+                  "type": "integer"
+                },
+                "second": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "chronology",
+                "dayOfMonth",
+                "dayOfWeek",
+                "dayOfYear",
+                "hour",
+                "minute",
+                "month",
+                "monthValue",
+                "nano",
+                "second",
+                "year"
+              ]
+            },
+            "actualAndExceededGrossCommitmentSum": {
+              "type": "integer"
+            },
+            "actualAndExceededGrossCommitmentSumWithDiscounts": {
+              "type": "integer"
+            },
+            "contractActivationFee": {
+              "type": "integer"
+            },
+            "contractBreachDate": {
+              "type": "string"
+            },
+            "contractDiscounts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "commitmentAmount": {
+                    "type": "integer"
+                  },
+                  "fee": {
+                    "type": "object",
+                    "properties": {
+                      "feeType": {
+                        "type": "string"
+                      },
+                      "grossAmount": {
+                        "type": "integer"
+                      },
+                      "netAmount": {
+                        "type": "integer"
+                      },
+                      "vat": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "feeType",
+                      "grossAmount",
+                      "netAmount",
+                      "vat"
+                    ]
+                  },
+                  "packageId": {
+                    "type": "string"
+                  },
+                  "serviceId": {
+                    "type": "string"
+                  },
+                  "serviceName": {
+                    "type": "string"
+                  },
+                  "tmCode": {
+                    "type": "string"
+                  },
+                  "translatedName": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "commitmentAmount",
+                  "fee",
+                  "packageId",
+                  "serviceId",
+                  "serviceName",
+                  "tmCode",
+                  "translatedName"
+                ]
+              }
+            },
+            "contractId": {
+              "type": "string"
+            },
+            "contractType": {
+              "type": "string"
+            },
+            "currentLoyalty": {
+              "type": "object",
+              "properties": {
+                "contractVersion": {
+                  "type": "string"
+                },
+                "devices": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "discountedEquipmentPrice": {
+                        "type": "string"
+                      },
+                      "displayName": {
+                        "type": "string"
+                      },
+                      "equipmentPrice": {
+                        "type": "string"
+                      },
+                      "hasInstalmentPlan": {
+                        "type": "boolean"
+                      },
+                      "instalmentPlan": {
+                        "type": "object",
+                        "properties": {
+                          "accountId": {
+                            "type": "string"
+                          },
+                          "creationDate": {
+                            "type": "string"
+                          },
+                          "dueAmount": {
+                            "type": "integer"
+                          },
+                          "earliestDueDateInstalment": {
+                            "type": "object",
+                            "properties": {
+                              "accountId": {
+                                "type": "string"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "dueDate": {
+                                "type": "string"
+                              },
+                              "instalmentNum": {
+                                "type": "integer"
+                              },
+                              "instalmentPlanId": {
+                                "type": "string"
+                              },
+                              "invoiceAccountingId": {
+                                "type": "string"
+                              },
+                              "openAmount": {
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "accountId",
+                              "amount",
+                              "dueDate",
+                              "instalmentNum",
+                              "instalmentPlanId",
+                              "invoiceAccountingId",
+                              "openAmount"
+                            ]
+                          },
+                          "instalmentPlanId": {
+                            "type": "string"
+                          },
+                          "instalmentPlanType": {
+                            "type": "string"
+                          },
+                          "invoiceIds": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "mobile": {
+                            "type": "boolean"
+                          },
+                          "overdueAmountToPay": {
+                            "type": "integer"
+                          },
+                          "paidInstalments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "accountId": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "dueDate": {
+                                  "type": "string"
+                                },
+                                "instalmentNum": {
+                                  "type": "integer"
+                                },
+                                "instalmentPlanId": {
+                                  "type": "string"
+                                },
+                                "invoiceAccountingId": {
+                                  "type": "string"
+                                },
+                                "openAmount": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "accountId",
+                                "amount",
+                                "dueDate",
+                                "instalmentNum",
+                                "instalmentPlanId",
+                                "invoiceAccountingId",
+                                "openAmount"
+                              ]
+                            }
+                          },
+                          "prolongation": {
+                            "type": "boolean"
+                          },
+                          "purposeId": {
+                            "type": "string"
+                          },
+                          "totalAmount": {
+                            "type": "integer"
+                          },
+                          "unpaidInstalments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "accountId": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "dueDate": {
+                                  "type": "string"
+                                },
+                                "instalmentNum": {
+                                  "type": "integer"
+                                },
+                                "instalmentPlanId": {
+                                  "type": "string"
+                                },
+                                "invoiceAccountingId": {
+                                  "type": "string"
+                                },
+                                "openAmount": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "accountId",
+                                "amount",
+                                "dueDate",
+                                "instalmentNum",
+                                "instalmentPlanId",
+                                "invoiceAccountingId",
+                                "openAmount"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "accountId",
+                          "creationDate",
+                          "dueAmount",
+                          "earliestDueDateInstalment",
+                          "instalmentPlanId",
+                          "instalmentPlanType",
+                          "invoiceIds",
+                          "mobile",
+                          "overdueAmountToPay",
+                          "paidInstalments",
+                          "prolongation",
+                          "purposeId",
+                          "totalAmount",
+                          "unpaidInstalments"
+                        ]
+                      },
+                      "marketEquipmentPrice": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "primary": {
+                        "type": "boolean"
+                      },
+                      "serialNumber": {
+                        "type": "string"
+                      },
+                      "sim": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "discountedEquipmentPrice",
+                      "displayName",
+                      "equipmentPrice",
+                      "hasInstalmentPlan",
+                      "instalmentPlan",
+                      "marketEquipmentPrice",
+                      "name",
+                      "primary",
+                      "serialNumber",
+                      "sim"
+                    ]
+                  }
+                },
+                "duration": {
+                  "type": "string"
+                },
+                "endDate": {
+                  "type": "string"
+                },
+                "endDateDay": {
+                  "type": "integer"
+                },
+                "endDateMonth": {
+                  "type": "integer"
+                },
+                "endDateYear": {
+                  "type": "integer"
+                },
+                "grossCommitment": {
+                  "type": "integer"
+                },
+                "info": {
+                  "type": "string"
+                },
+                "loyaltyNum": {
+                  "type": "string"
+                },
+                "modificationDate": {
+                  "type": "object",
+                  "properties": {
+                    "chronology": {
+                      "type": "object",
+                      "properties": {
+                        "calendarType": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "calendarType",
+                        "id"
+                      ]
+                    },
+                    "dayOfMonth": {
+                      "type": "integer"
+                    },
+                    "dayOfWeek": {
+                      "type": "string"
+                    },
+                    "dayOfYear": {
+                      "type": "integer"
+                    },
+                    "hour": {
+                      "type": "integer"
+                    },
+                    "minute": {
+                      "type": "integer"
+                    },
+                    "month": {
+                      "type": "string"
+                    },
+                    "monthValue": {
+                      "type": "integer"
+                    },
+                    "nano": {
+                      "type": "integer"
+                    },
+                    "second": {
+                      "type": "integer"
+                    },
+                    "year": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "chronology",
+                    "dayOfMonth",
+                    "dayOfWeek",
+                    "dayOfYear",
+                    "hour",
+                    "minute",
+                    "month",
+                    "monthValue",
+                    "nano",
+                    "second",
+                    "year"
+                  ]
+                },
+                "offerId": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "startDateDay": {
+                  "type": "integer"
+                },
+                "startDateMonth": {
+                  "type": "integer"
+                },
+                "startDateYear": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "contractVersion",
+                "devices",
+                "duration",
+                "endDate",
+                "endDateDay",
+                "endDateMonth",
+                "endDateYear",
+                "grossCommitment",
+                "info",
+                "loyaltyNum",
+                "modificationDate",
+                "offerId",
+                "startDate",
+                "startDateDay",
+                "startDateMonth",
+                "startDateYear",
+                "status",
+                "version"
+              ]
+            },
+            "deviceSerialNumber": {
+              "type": "string"
+            },
+            "endDate": {
+              "type": "string"
+            },
+            "exceededGrossCommitment": {
+              "type": "integer"
+            },
+            "exceededGrossCommitmentOrZero": {
+              "type": "integer"
+            },
+            "exceededMobileMagnumLineTotalCost": {
+              "type": "integer"
+            },
+            "firstLoyalty": {
+              "type": "object",
+              "properties": {
+                "contractVersion": {
+                  "type": "string"
+                },
+                "devices": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "discountedEquipmentPrice": {
+                        "type": "string"
+                      },
+                      "displayName": {
+                        "type": "string"
+                      },
+                      "equipmentPrice": {
+                        "type": "string"
+                      },
+                      "hasInstalmentPlan": {
+                        "type": "boolean"
+                      },
+                      "instalmentPlan": {
+                        "type": "object",
+                        "properties": {
+                          "accountId": {
+                            "type": "string"
+                          },
+                          "creationDate": {
+                            "type": "string"
+                          },
+                          "dueAmount": {
+                            "type": "integer"
+                          },
+                          "earliestDueDateInstalment": {
+                            "type": "object",
+                            "properties": {
+                              "accountId": {
+                                "type": "string"
+                              },
+                              "amount": {
+                                "type": "integer"
+                              },
+                              "dueDate": {
+                                "type": "string"
+                              },
+                              "instalmentNum": {
+                                "type": "integer"
+                              },
+                              "instalmentPlanId": {
+                                "type": "string"
+                              },
+                              "invoiceAccountingId": {
+                                "type": "string"
+                              },
+                              "openAmount": {
+                                "type": "integer"
+                              }
+                            },
+                            "required": [
+                              "accountId",
+                              "amount",
+                              "dueDate",
+                              "instalmentNum",
+                              "instalmentPlanId",
+                              "invoiceAccountingId",
+                              "openAmount"
+                            ]
+                          },
+                          "instalmentPlanId": {
+                            "type": "string"
+                          },
+                          "instalmentPlanType": {
+                            "type": "string"
+                          },
+                          "invoiceIds": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "mobile": {
+                            "type": "boolean"
+                          },
+                          "overdueAmountToPay": {
+                            "type": "integer"
+                          },
+                          "paidInstalments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "accountId": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "dueDate": {
+                                  "type": "string"
+                                },
+                                "instalmentNum": {
+                                  "type": "integer"
+                                },
+                                "instalmentPlanId": {
+                                  "type": "string"
+                                },
+                                "invoiceAccountingId": {
+                                  "type": "string"
+                                },
+                                "openAmount": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "accountId",
+                                "amount",
+                                "dueDate",
+                                "instalmentNum",
+                                "instalmentPlanId",
+                                "invoiceAccountingId",
+                                "openAmount"
+                              ]
+                            }
+                          },
+                          "prolongation": {
+                            "type": "boolean"
+                          },
+                          "purposeId": {
+                            "type": "string"
+                          },
+                          "totalAmount": {
+                            "type": "integer"
+                          },
+                          "unpaidInstalments": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "accountId": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "dueDate": {
+                                  "type": "string"
+                                },
+                                "instalmentNum": {
+                                  "type": "integer"
+                                },
+                                "instalmentPlanId": {
+                                  "type": "string"
+                                },
+                                "invoiceAccountingId": {
+                                  "type": "string"
+                                },
+                                "openAmount": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "accountId",
+                                "amount",
+                                "dueDate",
+                                "instalmentNum",
+                                "instalmentPlanId",
+                                "invoiceAccountingId",
+                                "openAmount"
+                              ]
+                            }
+                          }
+                        },
+                        "required": [
+                          "accountId",
+                          "creationDate",
+                          "dueAmount",
+                          "earliestDueDateInstalment",
+                          "instalmentPlanId",
+                          "instalmentPlanType",
+                          "invoiceIds",
+                          "mobile",
+                          "overdueAmountToPay",
+                          "paidInstalments",
+                          "prolongation",
+                          "purposeId",
+                          "totalAmount",
+                          "unpaidInstalments"
+                        ]
+                      },
+                      "marketEquipmentPrice": {
+                        "type": "string"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "primary": {
+                        "type": "boolean"
+                      },
+                      "serialNumber": {
+                        "type": "string"
+                      },
+                      "sim": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "discountedEquipmentPrice",
+                      "displayName",
+                      "equipmentPrice",
+                      "hasInstalmentPlan",
+                      "instalmentPlan",
+                      "marketEquipmentPrice",
+                      "name",
+                      "primary",
+                      "serialNumber",
+                      "sim"
+                    ]
+                  }
+                },
+                "duration": {
+                  "type": "string"
+                },
+                "endDate": {
+                  "type": "string"
+                },
+                "endDateDay": {
+                  "type": "integer"
+                },
+                "endDateMonth": {
+                  "type": "integer"
+                },
+                "endDateYear": {
+                  "type": "integer"
+                },
+                "grossCommitment": {
+                  "type": "integer"
+                },
+                "info": {
+                  "type": "string"
+                },
+                "loyaltyNum": {
+                  "type": "string"
+                },
+                "modificationDate": {
+                  "type": "object",
+                  "properties": {
+                    "chronology": {
+                      "type": "object",
+                      "properties": {
+                        "calendarType": {
+                          "type": "string"
+                        },
+                        "id": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "calendarType",
+                        "id"
+                      ]
+                    },
+                    "dayOfMonth": {
+                      "type": "integer"
+                    },
+                    "dayOfWeek": {
+                      "type": "string"
+                    },
+                    "dayOfYear": {
+                      "type": "integer"
+                    },
+                    "hour": {
+                      "type": "integer"
+                    },
+                    "minute": {
+                      "type": "integer"
+                    },
+                    "month": {
+                      "type": "string"
+                    },
+                    "monthValue": {
+                      "type": "integer"
+                    },
+                    "nano": {
+                      "type": "integer"
+                    },
+                    "second": {
+                      "type": "integer"
+                    },
+                    "year": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "chronology",
+                    "dayOfMonth",
+                    "dayOfWeek",
+                    "dayOfYear",
+                    "hour",
+                    "minute",
+                    "month",
+                    "monthValue",
+                    "nano",
+                    "second",
+                    "year"
+                  ]
+                },
+                "offerId": {
+                  "type": "string"
+                },
+                "startDate": {
+                  "type": "string"
+                },
+                "startDateDay": {
+                  "type": "integer"
+                },
+                "startDateMonth": {
+                  "type": "integer"
+                },
+                "startDateYear": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "contractVersion",
+                "devices",
+                "duration",
+                "endDate",
+                "endDateDay",
+                "endDateMonth",
+                "endDateYear",
+                "grossCommitment",
+                "info",
+                "loyaltyNum",
+                "modificationDate",
+                "offerId",
+                "startDate",
+                "startDateDay",
+                "startDateMonth",
+                "startDateYear",
+                "status",
+                "version"
+              ]
+            },
+            "grossCommitment": {
+              "type": "integer"
+            },
+            "grossCommitmentOrZero": {
+              "type": "integer"
+            },
+            "grossCommitmentWithDiscounts": {
+              "type": "integer"
+            },
+            "grossCommitmentWithDiscountsOrZero": {
+              "type": "integer"
+            },
+            "grossCommitmentWithoutDiscounts": {
+              "type": "integer"
+            },
+            "homeZoneVasStatus": {
+              "type": "string"
+            },
+            "imeiStateDTO": {
+              "type": "string"
+            },
+            "loyalties": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "contractVersion": {
+                    "type": "string"
+                  },
+                  "devices": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "discountedEquipmentPrice": {
+                          "type": "string"
+                        },
+                        "displayName": {
+                          "type": "string"
+                        },
+                        "equipmentPrice": {
+                          "type": "string"
+                        },
+                        "hasInstalmentPlan": {
+                          "type": "boolean"
+                        },
+                        "instalmentPlan": {
+                          "type": "object",
+                          "properties": {
+                            "accountId": {
+                              "type": "string"
+                            },
+                            "creationDate": {
+                              "type": "string"
+                            },
+                            "dueAmount": {
+                              "type": "integer"
+                            },
+                            "earliestDueDateInstalment": {
+                              "type": "object",
+                              "properties": {
+                                "accountId": {
+                                  "type": "string"
+                                },
+                                "amount": {
+                                  "type": "integer"
+                                },
+                                "dueDate": {
+                                  "type": "string"
+                                },
+                                "instalmentNum": {
+                                  "type": "integer"
+                                },
+                                "instalmentPlanId": {
+                                  "type": "string"
+                                },
+                                "invoiceAccountingId": {
+                                  "type": "string"
+                                },
+                                "openAmount": {
+                                  "type": "integer"
+                                }
+                              },
+                              "required": [
+                                "accountId",
+                                "amount",
+                                "dueDate",
+                                "instalmentNum",
+                                "instalmentPlanId",
+                                "invoiceAccountingId",
+                                "openAmount"
+                              ]
+                            },
+                            "instalmentPlanId": {
+                              "type": "string"
+                            },
+                            "instalmentPlanType": {
+                              "type": "string"
+                            },
+                            "invoiceIds": {
+                              "type": "array",
+                              "items": {
+                                "type": "string"
+                              }
+                            },
+                            "mobile": {
+                              "type": "boolean"
+                            },
+                            "overdueAmountToPay": {
+                              "type": "integer"
+                            },
+                            "paidInstalments": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "accountId": {
+                                    "type": "string"
+                                  },
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "dueDate": {
+                                    "type": "string"
+                                  },
+                                  "instalmentNum": {
+                                    "type": "integer"
+                                  },
+                                  "instalmentPlanId": {
+                                    "type": "string"
+                                  },
+                                  "invoiceAccountingId": {
+                                    "type": "string"
+                                  },
+                                  "openAmount": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "accountId",
+                                  "amount",
+                                  "dueDate",
+                                  "instalmentNum",
+                                  "instalmentPlanId",
+                                  "invoiceAccountingId",
+                                  "openAmount"
+                                ]
+                              }
+                            },
+                            "prolongation": {
+                              "type": "boolean"
+                            },
+                            "purposeId": {
+                              "type": "string"
+                            },
+                            "totalAmount": {
+                              "type": "integer"
+                            },
+                            "unpaidInstalments": {
+                              "type": "array",
+                              "items": {
+                                "type": "object",
+                                "properties": {
+                                  "accountId": {
+                                    "type": "string"
+                                  },
+                                  "amount": {
+                                    "type": "integer"
+                                  },
+                                  "dueDate": {
+                                    "type": "string"
+                                  },
+                                  "instalmentNum": {
+                                    "type": "integer"
+                                  },
+                                  "instalmentPlanId": {
+                                    "type": "string"
+                                  },
+                                  "invoiceAccountingId": {
+                                    "type": "string"
+                                  },
+                                  "openAmount": {
+                                    "type": "integer"
+                                  }
+                                },
+                                "required": [
+                                  "accountId",
+                                  "amount",
+                                  "dueDate",
+                                  "instalmentNum",
+                                  "instalmentPlanId",
+                                  "invoiceAccountingId",
+                                  "openAmount"
+                                ]
+                              }
+                            }
+                          },
+                          "required": [
+                            "accountId",
+                            "creationDate",
+                            "dueAmount",
+                            "earliestDueDateInstalment",
+                            "instalmentPlanId",
+                            "instalmentPlanType",
+                            "invoiceIds",
+                            "mobile",
+                            "overdueAmountToPay",
+                            "paidInstalments",
+                            "prolongation",
+                            "purposeId",
+                            "totalAmount",
+                            "unpaidInstalments"
+                          ]
+                        },
+                        "marketEquipmentPrice": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        },
+                        "primary": {
+                          "type": "boolean"
+                        },
+                        "serialNumber": {
+                          "type": "string"
+                        },
+                        "sim": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "discountedEquipmentPrice",
+                        "displayName",
+                        "equipmentPrice",
+                        "hasInstalmentPlan",
+                        "instalmentPlan",
+                        "marketEquipmentPrice",
+                        "name",
+                        "primary",
+                        "serialNumber",
+                        "sim"
+                      ]
+                    }
+                  },
+                  "duration": {
+                    "type": "string"
+                  },
+                  "endDate": {
+                    "type": "string"
+                  },
+                  "endDateDay": {
+                    "type": "integer"
+                  },
+                  "endDateMonth": {
+                    "type": "integer"
+                  },
+                  "endDateYear": {
+                    "type": "integer"
+                  },
+                  "grossCommitment": {
+                    "type": "integer"
+                  },
+                  "info": {
+                    "type": "string"
+                  },
+                  "loyaltyNum": {
+                    "type": "string"
+                  },
+                  "modificationDate": {
+                    "type": "object",
+                    "properties": {
+                      "chronology": {
+                        "type": "object",
+                        "properties": {
+                          "calendarType": {
+                            "type": "string"
+                          },
+                          "id": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "calendarType",
+                          "id"
+                        ]
+                      },
+                      "dayOfMonth": {
+                        "type": "integer"
+                      },
+                      "dayOfWeek": {
+                        "type": "string"
+                      },
+                      "dayOfYear": {
+                        "type": "integer"
+                      },
+                      "hour": {
+                        "type": "integer"
+                      },
+                      "minute": {
+                        "type": "integer"
+                      },
+                      "month": {
+                        "type": "string"
+                      },
+                      "monthValue": {
+                        "type": "integer"
+                      },
+                      "nano": {
+                        "type": "integer"
+                      },
+                      "second": {
+                        "type": "integer"
+                      },
+                      "year": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "chronology",
+                      "dayOfMonth",
+                      "dayOfWeek",
+                      "dayOfYear",
+                      "hour",
+                      "minute",
+                      "month",
+                      "monthValue",
+                      "nano",
+                      "second",
+                      "year"
+                    ]
+                  },
+                  "offerId": {
+                    "type": "string"
+                  },
+                  "startDate": {
+                    "type": "string"
+                  },
+                  "startDateDay": {
+                    "type": "integer"
+                  },
+                  "startDateMonth": {
+                    "type": "integer"
+                  },
+                  "startDateYear": {
+                    "type": "integer"
+                  },
+                  "status": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "contractVersion",
+                  "devices",
+                  "duration",
+                  "endDate",
+                  "endDateDay",
+                  "endDateMonth",
+                  "endDateYear",
+                  "grossCommitment",
+                  "info",
+                  "loyaltyNum",
+                  "modificationDate",
+                  "offerId",
+                  "startDate",
+                  "startDateDay",
+                  "startDateMonth",
+                  "startDateYear",
+                  "status",
+                  "version"
+                ]
+              }
+            },
+            "mobileMagnum": {
+              "type": "boolean"
+            },
+            "msisdn": {
+              "type": "string"
+            },
+            "officeZoneVasStatus": {
+              "type": "string"
+            },
+            "pageId": {
+              "type": "string"
+            },
+            "parentAccountId": {
+              "type": "string"
+            },
+            "partOfMagnum": {
+              "type": "boolean"
+            },
+            "penalty": {
+              "type": "string"
+            },
+            "primaryDeviceName": {
+              "type": "string"
+            },
+            "retentionFlag": {
+              "type": "string"
+            },
+            "retentionStartDate": {
+              "type": "object",
+              "properties": {
+                "chronology": {
+                  "type": "object",
+                  "properties": {
+                    "calendarType": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "calendarType",
+                    "id"
+                  ]
+                },
+                "dayOfMonth": {
+                  "type": "integer"
+                },
+                "dayOfWeek": {
+                  "type": "string"
+                },
+                "dayOfYear": {
+                  "type": "integer"
+                },
+                "hour": {
+                  "type": "integer"
+                },
+                "minute": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "string"
+                },
+                "monthValue": {
+                  "type": "integer"
+                },
+                "nano": {
+                  "type": "integer"
+                },
+                "second": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "chronology",
+                "dayOfMonth",
+                "dayOfWeek",
+                "dayOfYear",
+                "hour",
+                "minute",
+                "month",
+                "monthValue",
+                "nano",
+                "second",
+                "year"
+              ]
+            },
+            "servicesWrapper": {
+              "type": "object",
+              "properties": {
+                "activations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "commitmentGrossAmount": {
+                        "type": "integer"
+                      },
+                      "serviceName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "commitmentGrossAmount",
+                      "serviceName"
+                    ]
+                  }
+                },
+                "activationsCommitmentsAmountGross": {
+                  "type": "integer"
+                },
+                "activationsCommitmentsAmountNet": {
+                  "type": "integer"
+                },
+                "contractGrossAmountCommitment": {
+                  "type": "integer"
+                },
+                "contractNetAmountCommitment": {
+                  "type": "integer"
+                },
+                "discountCommitmentAmountGross": {
+                  "type": "integer"
+                },
+                "discounts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "commitmentGrossAmount": {
+                        "type": "integer"
+                      },
+                      "serviceName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "commitmentGrossAmount",
+                      "serviceName"
+                    ]
+                  }
+                },
+                "subscriptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "commitmentGrossAmount": {
+                        "type": "integer"
+                      },
+                      "serviceName": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "commitmentGrossAmount",
+                      "serviceName"
+                    ]
+                  }
+                },
+                "subscriptionsCommitmentAmountGross": {
+                  "type": "integer"
+                },
+                "subscriptionsCommitmentAmountNet": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "activations",
+                "activationsCommitmentsAmountGross",
+                "activationsCommitmentsAmountNet",
+                "contractGrossAmountCommitment",
+                "contractNetAmountCommitment",
+                "discountCommitmentAmountGross",
+                "discounts",
+                "subscriptions",
+                "subscriptionsCommitmentAmountGross",
+                "subscriptionsCommitmentAmountNet"
+              ]
+            },
+            "simDataDTO": {
+              "type": "object",
+              "properties": {
+                "activationAvailable": {
+                  "type": "boolean"
+                },
+                "activationVisible": {
+                  "type": "boolean"
+                },
+                "antiTheftLock": {
+                  "type": "boolean"
+                },
+                "cardSize": {
+                  "type": "string"
+                },
+                "changeAvailable": {
+                  "type": "boolean"
+                },
+                "changeCompatible": {
+                  "type": "boolean"
+                },
+                "checkIfLteSupported": {
+                  "type": "boolean"
+                },
+                "dealerId": {
+                  "type": "string"
+                },
+                "eSimDownloandAvailable": {
+                  "type": "boolean"
+                },
+                "electricalProfile": {
+                  "type": "string"
+                },
+                "graphicalProfile": {
+                  "type": "string"
+                },
+                "hlCode": {
+                  "type": "string"
+                },
+                "hrld": {
+                  "type": "string"
+                },
+                "imsi": {
+                  "type": "string"
+                },
+                "msisdn": {
+                  "type": "string"
+                },
+                "plCodes": {
+                  "type": "string"
+                },
+                "puk": {
+                  "type": "string"
+                },
+                "puk2": {
+                  "type": "string"
+                },
+                "reservedByUser": {
+                  "type": "string"
+                },
+                "sim": {
+                  "type": "string"
+                },
+                "simType": {
+                  "type": "string"
+                },
+                "simTypeShort": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "activationAvailable",
+                "activationVisible",
+                "antiTheftLock",
+                "cardSize",
+                "changeAvailable",
+                "changeCompatible",
+                "checkIfLteSupported",
+                "dealerId",
+                "eSimDownloandAvailable",
+                "electricalProfile",
+                "graphicalProfile",
+                "hlCode",
+                "hrld",
+                "imsi",
+                "msisdn",
+                "plCodes",
+                "puk",
+                "puk2",
+                "reservedByUser",
+                "sim",
+                "simType",
+                "simTypeShort",
+                "status"
+              ]
+            },
+            "startDate": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            },
+            "statusChangeDateTime": {
+              "type": "object",
+              "properties": {
+                "chronology": {
+                  "type": "object",
+                  "properties": {
+                    "calendarType": {
+                      "type": "string"
+                    },
+                    "id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "calendarType",
+                    "id"
+                  ]
+                },
+                "dayOfMonth": {
+                  "type": "integer"
+                },
+                "dayOfWeek": {
+                  "type": "string"
+                },
+                "dayOfYear": {
+                  "type": "integer"
+                },
+                "hour": {
+                  "type": "integer"
+                },
+                "minute": {
+                  "type": "integer"
+                },
+                "month": {
+                  "type": "string"
+                },
+                "monthValue": {
+                  "type": "integer"
+                },
+                "nano": {
+                  "type": "integer"
+                },
+                "second": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "chronology",
+                "dayOfMonth",
+                "dayOfWeek",
+                "dayOfYear",
+                "hour",
+                "minute",
+                "month",
+                "monthValue",
+                "nano",
+                "second",
+                "year"
+              ]
+            },
+            "tariffId": {
+              "type": "string"
+            },
+            "tariffName": {
+              "type": "string"
+            },
+            "tariffType": {
+              "type": "string"
+            },
+            "tariffTypeData": {
+              "type": "boolean"
+            },
+            "tmCode": {
+              "type": "string"
+            },
+            "vasOrangeZoneStatus": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "activationDateTime",
+            "actualAndExceededGrossCommitmentSum",
+            "actualAndExceededGrossCommitmentSumWithDiscounts",
+            "contractActivationFee",
+            "contractBreachDate",
+            "contractDiscounts",
+            "contractId",
+            "contractType",
+            "currentLoyalty",
+            "deviceSerialNumber",
+            "endDate",
+            "exceededGrossCommitment",
+            "exceededGrossCommitmentOrZero",
+            "exceededMobileMagnumLineTotalCost",
+            "firstLoyalty",
+            "grossCommitment",
+            "grossCommitmentOrZero",
+            "grossCommitmentWithDiscounts",
+            "grossCommitmentWithDiscountsOrZero",
+            "grossCommitmentWithoutDiscounts",
+            "homeZoneVasStatus",
+            "imeiStateDTO",
+            "loyalties",
+            "mobileMagnum",
+            "msisdn",
+            "officeZoneVasStatus",
+            "pageId",
+            "parentAccountId",
+            "partOfMagnum",
+            "penalty",
+            "primaryDeviceName",
+            "retentionFlag",
+            "retentionStartDate",
+            "servicesWrapper",
+            "simDataDTO",
+            "startDate",
+            "status",
+            "statusChangeDateTime",
+            "tariffId",
+            "tariffName",
+            "tariffType",
+            "tariffTypeData",
+            "tmCode",
+            "vasOrangeZoneStatus"
+          ]
+        }
+      },
+      "accountId": {
+        "type": "string"
+      },
+      "accountLabel": {
+        "type": "string"
+      },
+      "archival": {
+        "type": "boolean"
+      },
+      "customerId": {
+        "type": "string"
+      },
+      "eInvocieEmail": {
+        "type": "string"
+      },
+      "hasMagnumProduct": {
+        "type": "boolean"
+      },
+      "magnumAccount": {
+        "type": "boolean"
+      },
+      "mix": {
+        "type": "boolean"
+      },
+      "mobileAccount": {
+        "type": "boolean"
+      },
+      "nju": {
+        "type": "boolean"
+      },
+      "prepaid": {
+        "type": "boolean"
+      },
+      "selected": {
+        "type": "boolean"
+      },
+      "zetafon": {
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "accountCode",
+      "accountContracts",
+      "accountId",
+      "accountLabel",
+      "archival",
+      "customerId",
+      "eInvocieEmail",
+      "hasMagnumProduct",
+      "magnumAccount",
+      "mix",
+      "mobileAccount",
+      "nju",
+      "prepaid",
+      "selected",
+      "zetafon"
+    ]
+  }
+}

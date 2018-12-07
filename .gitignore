@@ -1,0 +1,11 @@
+# Target #
+target/
+
+*.class
+
+# Package Files #
+*.war
+*.ear
+
+# IDEA config files
+.idea/

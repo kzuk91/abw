@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "prePaid": {
+      "type": "integer"
+    },
+    "postPaid": {
+      "type": "integer"
+    },
+    "mobileVoice": {
+      "type": "integer"
+    },
+    "mobileData": {
+      "type": "integer"
+    },
+    "mobileHomeData": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "prePaid",
+    "postPaid",
+    "mobileVoice",
+    "mobileData",
+    "mobileHomeData"
+  ]
+}

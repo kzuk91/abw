@@ -1,0 +1,112 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="karol (generated)" id="1520771055682-1">
+        <createTable tableName="conditions">
+            <column name="condition_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comparator" type="INT"/>
+            <column name="create_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="modified_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="value" type="VARCHAR(255)"/>
+            <column name="fact_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="question_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-2">
+        <createTable tableName="endpoints">
+            <column name="endpoint_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(150)"/>
+            <column name="create_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="modified_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="name" type="VARCHAR(50)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-3">
+        <createTable tableName="facts">
+            <column name="fact_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="create_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="modified_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="value" type="VARCHAR(150)"/>
+            <column name="endpoint_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-4">
+        <createTable tableName="questions">
+            <column name="question_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="create_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="modified_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="name" type="VARCHAR(50)"/>
+            <column name="negative_value" type="VARCHAR(150)"/>
+            <column name="positive_value" type="VARCHAR(150)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-5">
+        <createTable tableName="tags">
+            <column name="tag_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="create_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="description" type="VARCHAR(255)"/>
+            <column name="modified_date" type="TIMESTAMP WITHOUT TIME ZONE"/>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="value" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-6">
+        <createTable tableName="tags_facts">
+            <column name="tag_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fact_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-7">
+        <addPrimaryKey columnNames="condition_id" constraintName="conditionsPK" tableName="conditions"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-8">
+        <addPrimaryKey columnNames="endpoint_id" constraintName="endpointsPK" tableName="endpoints"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-9">
+        <addPrimaryKey columnNames="fact_id" constraintName="factsPK" tableName="facts"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-10">
+        <addPrimaryKey columnNames="question_id" constraintName="questionsPK" tableName="questions"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-11">
+        <addPrimaryKey columnNames="tag_id" constraintName="tagsPK" tableName="tags"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-12">
+        <addForeignKeyConstraint baseColumnNames="question_id" baseTableName="conditions" constraintName="FK_41o4b608k0yq3i5ag4j994sif" deferrable="false" initiallyDeferred="false" referencedColumnNames="question_id" referencedTableName="questions"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-13">
+        <addForeignKeyConstraint baseColumnNames="endpoint_id" baseTableName="facts" constraintName="FK_6snkbn1i6dwky0nyf1i1kjd7j" deferrable="false" initiallyDeferred="false" referencedColumnNames="endpoint_id" referencedTableName="endpoints"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-14">
+        <addForeignKeyConstraint baseColumnNames="fact_id" baseTableName="conditions" constraintName="FK_eb20dx844082q0jhim7ujyxb4" deferrable="false" initiallyDeferred="false" referencedColumnNames="fact_id" referencedTableName="facts"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-15">
+        <addForeignKeyConstraint baseColumnNames="fact_id" baseTableName="tags_facts" constraintName="FK_nhajan6bmwpn0jqcww9tmgqjt" deferrable="false" initiallyDeferred="false" referencedColumnNames="fact_id" referencedTableName="facts"/>
+    </changeSet>
+    <changeSet author="karol (generated)" id="1520771055682-16">
+        <addForeignKeyConstraint baseColumnNames="tag_id" baseTableName="tags_facts" constraintName="FK_tan6q4jvqqjfcfupfjb0vnfif" deferrable="false" initiallyDeferred="false" referencedColumnNames="tag_id" referencedTableName="tags"/>
+    </changeSet>
+</databaseChangeLog>
